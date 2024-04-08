@@ -1,0 +1,47 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.title }">
+
+    <meta name="author" content="{{ site.title }">
+
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,600" rel="stylesheet" type="text/css">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/favicon.png" rel="apple-touch-icon" type="image/png">
+    <link href="/favicon.png" rel="icon" type="image/png">
+
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/mobile.css" rel="stylesheet">
+
+    {% if page.title %}
+    {% assign page_title = page.title | escape | prepend: "Calculus Games | " %}
+    {% else %}
+    {% assign page_title = site.title | escape %}
+    {% endif %}
+
+    <title>{{ page_title }}</title>
+
+    {% if page.summary %}
+    {% assign summary = page.summary %}
+    {% else %}
+    {% assign summary = page.content | strip_html | truncate: 200 %}
+    {% endif %}
+
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ summary }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://calcugames.xyz/favicon.png">
+
+    <meta name="theme-color" content="#ff0000">
+    <meta name="og:title" content="{{ page_title }}">
+    <meta name="og:description" content="{{ summary }}">
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="{{ site.title }">
+    <meta name="og:url" content="{{ page.url }}">
+    <meta name="og:image" content="https://calcugames.xyz/favicon.png">
+    <meta name="og:site_name" content="{{ site.title }}">
+    <meta name="og:locale" content="en_US">
+
+</head>
