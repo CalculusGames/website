@@ -1,0 +1,9 @@
+- name: Discord
+  img: /assets/links/discord.png
+  url: https://discord.com/invite/WDzuyqVwTX
+- name: GitHub
+  img: /assets/links/github.png
+  url: https://github.com/CalculusGames
+- name: Trello
+  img: /assets/links/trello.png
+  url: https://trello.com/b/7ZQ6ZQ8v/calculus-games
