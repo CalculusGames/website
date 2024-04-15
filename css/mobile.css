@@ -1,0 +1,13 @@
+@media (max-width: 1145px) {
+
+    header {
+        padding-top: 2vh;
+    }
+
+    .header-links {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh 0;
+    }
+}

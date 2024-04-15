@@ -1,0 +1,127 @@
+:root {
+    --bg: #2a2a2a;
+    --bg-2: #1a1a1a;
+    --bg-gradient: linear-gradient(to bottom, #1a1a1a 0%, #2a2a2a 100%);
+
+    --link-color: green;
+    --text-color: #fff;
+    --text-color-2: #ddd;
+    --text-color-3: #888;
+    --text-color-4: #000;
+
+    --shadow: 0 10px 20px -5px rgb(0, 0, 0);
+}
+
+[data-theme="light"] {
+    --bg: #fff;
+    --bg-2: #f1f1f1;
+    --bg-gradient: linear-gradient(to bottom, #d1d1d1 0%, #fff 100%);
+
+    --link-color: black;
+    --text-color: #000;
+    --text-color-2: #333;
+    --text-color-3: #777;
+    --text-color-4: #eee;
+
+    --shadow: 0 10px 20px -5px rgb(169, 169, 169);
+}
+
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--bg);
+}
+
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    overflow-x: hidden;
+    color: var(--text-color);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-color);
+}
+
+#theme-icon {
+    height: auto;
+    width: 5%;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 64px;
+    max-height: 64px;
+}
+
+/* Page */
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-inner {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.title {
+    border-bottom: 4px solid var(--text-color-3);
+    padding-bottom: 1.25vh;
+}
+
+/* Header */
+
+.header {
+    min-height: 7vh;
+    background: var(--bg-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.header-links {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding-right: 3vw;
+
+    column-gap: 2vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-link {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.25em
+}
+
+.header-link-img {
+    height: 3.5vh;
+    width: auto;
+
+    min-height: 16px;
+    min-width: 16px;
+    max-height: 64px;
+    max-width: 64px;
+
+    margin-right: 0.2vw;
+    border-radius: 5%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.header-link-img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
