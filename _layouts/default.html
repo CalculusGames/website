@@ -3,12 +3,15 @@
 
     {% include head.html %}
     <body>
+        {% include header.html %}
+
         <div>
             {{ content }}
         </div>
 
         <noscript>Please enable JavaScript for this site.</noscript>
-        <script src="/js/jquery.min.js"></script>
+        <script src="/js/lib/jquery.min.js"></script>
+        <script src="/js/lib/theme.js"></script>
     </body>
 
 </html>
