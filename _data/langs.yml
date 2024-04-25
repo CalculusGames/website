@@ -1,0 +1,15 @@
+- name: Java
+  img: java.png
+  url: https://en.wikipedia.org/wiki/Java_(programming_language)
+- name: Kotlin
+  img: kotlin.png
+  url: https://en.wikipedia.org/wiki/Kotlin_(programming_language)
+- name: C++
+  img: cpp.png
+  url: https://en.wikipedia.org/wiki/C%2B%2B
+- name: JavaScript
+  img: js.png
+  url: https://en.wikipedia.org/wiki/JavaScript
+- name: Python
+  img: python.png
+  url: https://en.wikipedia.org/wiki/Python_(programming_language)

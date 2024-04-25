@@ -7,3 +7,6 @@
 - name: Trello
   img: /assets/links/trello.png
   url: https://trello.com/b/7ZQ6ZQ8v/calculus-games
+- name: SonarCloud
+  img: /assets/links/sonarcloud.png
+  url: https://sonarcloud.io/organizations/calculus-games
