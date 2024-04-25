@@ -3,7 +3,6 @@
     --bg-2: #1a1a1a;
     --bg-gradient: linear-gradient(to bottom, #1a1a1a 0%, #2a2a2a 100%);
 
-    --link-color: green;
     --text-color: #fff;
     --text-color-2: #ddd;
     --text-color-3: #888;
@@ -17,7 +16,6 @@
     --bg-2: #f1f1f1;
     --bg-gradient: linear-gradient(to bottom, #d1d1d1 0%, #fff 100%);
 
-    --link-color: black;
     --text-color: #000;
     --text-color-2: #333;
     --text-color-3: #777;
@@ -42,10 +40,11 @@ body {
 
 a {
     text-decoration: none;
+    color: red;
 }
 
-a:hover {
-    color: var(--link-color);
+a:hover, a:visited, a:active {
+    filter: brightness(0.8);
 }
 
 #theme-icon {
@@ -68,7 +67,7 @@ a:hover {
 
 .box-inner {
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 70%;
@@ -77,6 +76,12 @@ a:hover {
 .title {
     border-bottom: 4px solid var(--text-color-3);
     padding-bottom: 1.25vh;
+}
+
+.link {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.25em
 }
 
 /* Header */
@@ -101,12 +106,6 @@ a:hover {
     align-items: center;
 }
 
-.header-link {
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 1.25em
-}
-
 .header-link-img {
     height: 3.5vh;
     width: auto;
@@ -124,4 +123,31 @@ a:hover {
 .header-link-img:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
+}
+
+/* Page */
+
+.subtitle {
+    font-size: 1.5em;
+    color: var(--text-color-3);
+    margin-top: 1.25vh;
+}
+
+.link-img {
+    height: 6vh;
+    width: auto;
+
+    min-height: 64px;
+    min-width: 64px;
+    max-height: 128px;
+    max-width: 128px;
+
+    margin-right: 2vw;
+    border-radius: 5%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.link-img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
 }

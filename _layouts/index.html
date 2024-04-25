@@ -2,9 +2,20 @@
 layout: default
 ---
 
-<script src="/js/lib/logo.js"></script>
+<script src="/js/lib/logo.min.js"></script>
 
 <div class="box">
     <canvas id="logo" height="400"></canvas>
     <h1 style="transform: translateY(-10vh)" class="title">{{ site.title }}</h1>
+</div>
+
+<div class="box">
+    <h2 class="subtitle">An indie video game company owned and operated by <a href="https://gmitch215.xyz" target="_blank">@gmitch215</a>.</h2>
+    <div class="box-inner">
+        {% for lang in site.data.langs %}
+        <a href="{{ lang.url }}" class="header-link">
+            <img src="assets/lang/{{ lang.img }}" alt="{{ lang.name }}" class="link-img" title="{{ lang.name }}" />
+        </a>
+        {% endfor %}
+    </div>
 </div>
