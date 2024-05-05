@@ -25,6 +25,10 @@ function loadTheme(theme) {
     document.cookie = "theme=" + theme + "; SameSite=None; Secure";
 
     document.getElementById("theme-icon").src = getThemeIcon(theme);
+
+    document.querySelectorAll(".shape img").forEach((img) => {
+        img.src = img.src.replace('light', 'dark').replace('dark', 'light');
+    })
 }
 
 document.onload = function(e) {

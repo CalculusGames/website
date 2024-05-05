@@ -17,7 +17,7 @@
     --bg-gradient: linear-gradient(to bottom, #d1d1d1 0%, #fff 100%);
 
     --text-color: #000;
-    --text-color-2: #333;
+    --text-color-2: #888;
     --text-color-3: #777;
     --text-color-4: #eee;
 
@@ -26,8 +26,6 @@
 
 
 html {
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: var(--bg);
 }
 
@@ -36,6 +34,14 @@ body {
     overflow-x: hidden;
     color: var(--text-color);
     margin: 0;
+    position: relative;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 a {
@@ -150,4 +156,49 @@ a:hover, a:visited, a:active {
 .link-img:hover {
     transform: scale(1.2);
     transition: transform 0.5s ease-in-out;
+}
+
+/* Shape Animation */
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotate(360deg) rotateY(360deg);
+    }
+}
+
+@keyframes rotating2 {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+.shape {
+    position: absolute;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+.shape:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.5);
+}
+
+.shape img {
+    aspect-ratio: 1 / 1;
+    width: 4vw;
+    height: auto;
+
+    min-height: 32px;
+    min-width: 32px;
+    max-height: 128px;
+    max-width: 128px;
 }
